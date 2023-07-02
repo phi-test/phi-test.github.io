@@ -4,6 +4,7 @@ window.onload = () => {
     const el = document.querySelector("[gps-new-camera]");
     el.addEventListener("gps-camera-update-position", e => {
         if(!testEntitiesAdded) {
+            alert(`Got first GPS position: lon ${e.detail.position.longitude} lat ${e.detail.position.latitude}`);
             // Add four boxes to the north (red), south (yellow), west (blue)
             // and east (red) of the initial GPS position
             const properties = [{
@@ -36,7 +37,7 @@ window.onload = () => {
                     latitude: e.detail.position.latitude + prop.latDis,
                     longitude: e.detail.position.longitude + prop.lonDis
                 });
-                entity.setAttribute('clicker', { });                
+                
                 document.querySelector("a-scene").appendChild(entity);
             }
             testEntitiesAdded = true;
