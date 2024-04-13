@@ -17,8 +17,8 @@
                 //     element.setAttribute('transparent', !currentVisibility);
                 // });
                 element.addEventListener('click', function () {
-                    element.material.setAttribute('transparent', !element.material.transparent);
-                    console.log("batatinha clicada")
+                    console.log("batatinha clicada");
+                    element.setAttribute('transparent', !element.getAttribute('material').transparent);
                 });
 
                 // element.addEventListener('mouseleave', function () {
