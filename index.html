@@ -9,12 +9,16 @@
     <script>
         AFRAME.registerComponent('display-image-on-click', {
             init: function () {
-                var parameters = this.parameters;
-                var element = document.getElementById('test')
-                var currentVisibility = element.getAttribute('material').transparent;
+                // var parameters = this.parameters;
+                // var element = this.element;  // <a-sky>
+                // var currentVisibility = element.getAttribute('material').transparent;
 
-                element.addEventListener('click', function () {
-                    element.setAttribute('transparent', !currentVisibility);
+                // element.addEventListener('click', function () {
+                //     element.setAttribute('transparent', !currentVisibility);
+                // });
+                this.addEventListener('click', function () {
+                    this.material.setAttribute('transparent', !this.material.transparent);
+                    console.log("batatinha clicada")
                 });
 
                 // element.addEventListener('mouseleave', function () {
@@ -29,7 +33,7 @@
 
 
     <a-scene>
-        <a-sky id="test" src="puydesancy.jpg" rotation="0 -130 0" display-image-on-click></a-sky>
+        <a-sky src="puydesancy.jpg" rotation="0 -130 0" display-image-on-click></a-sky>
         <!-- <a-box color="#EF2D5E" position="0 1 -4" change-color-on-hover="color: blue"></a-box> -->
 
         <a-camera><a-cursor></a-cursor></a-camera>
