@@ -10,14 +10,14 @@
         AFRAME.registerComponent('display-image-on-click', {
             init: function () {
                 // var parameters = this.parameters;
-                // var element = this.element;  // <a-sky>
+                var element = this.el;  // <a-sky>/
                 // var currentVisibility = element.getAttribute('material').transparent;
 
                 // element.addEventListener('click', function () {
                 //     element.setAttribute('transparent', !currentVisibility);
                 // });
-                this.addEventListener('click', function () {
-                    this.material.setAttribute('transparent', !this.material.transparent);
+                element.addEventListener('click', function () {
+                    element.material.setAttribute('transparent', !element.material.transparent);
                     console.log("batatinha clicada")
                 });
 
