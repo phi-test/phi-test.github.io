@@ -8,13 +8,9 @@
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <script>
         AFRAME.registerComponent('display-image-on-click', {
-            schema: {
-                transparent: { default: true }
-            },
-
             init: function () {
                 var parameters = this.parameters;
-                var element = this.element;  // <a-sky>
+                var element = document.getElementById('test')
                 var currentVisibility = element.getAttribute('material').transparent;
 
                 element.addEventListener('click', function () {
@@ -33,7 +29,7 @@
 
 
     <a-scene>
-        <a-sky src="puydesancy.jpg" rotation="0 -130 0" display-image-on-click="transparent: true"></a-sky>
+        <a-sky id="test" src="puydesancy.jpg" rotation="0 -130 0" display-image-on-click></a-sky>
         <!-- <a-box color="#EF2D5E" position="0 1 -4" change-color-on-hover="color: blue"></a-box> -->
 
         <a-camera><a-cursor></a-cursor></a-camera>
