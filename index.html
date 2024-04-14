@@ -20,7 +20,7 @@
                     box.addEventListener('click', function () {
                         var currentVisibility = element.getAttribute('material').visible;
                         console.log("batatinha visivel: ", currentVisibility);
-                        // element.setAttribute('transparent', !currentVisibility);
+                        element.setAttribute('transparent', !currentVisibility);
                         element.setAttribute('visible', !currentVisibility);
                     });
                 });
@@ -38,8 +38,8 @@
 
     <a-scene>
 
-        <a-sky src="puydesancy.jpg" rotation="0 -130 0" display-image-on-click></a-sky>
         <a-box id="box" color="#EF2D5E" position="0 1 -4"></a-box>
+        <a-sky src="puydesancy.jpg" rotation="0 -130 0" display-image-on-click></a-sky>
         <a-camera><a-cursor>
             </a-cursor></a-camera>
     </a-scene>
