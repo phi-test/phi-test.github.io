@@ -20,6 +20,7 @@
                     var currentVisibility = element.getAttribute('material').transparent;
                     console.log("batatinha visivel: ", currentVisibility);
                     element.setAttribute('transparent', !currentVisibility);
+                    element.setAttribute('visible', !currentVisibility);
                     if (currentVisibility) {
                         element.setAttribute('opacity', 1);
                     } else {
