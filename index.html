@@ -18,10 +18,10 @@
                 // });
                 document.querySelectorAll('a-box').forEach(box => {
                     box.addEventListener('click', function () {
-                        var currentVisibility = element.getAttribute('material').visible;
+                        var currentVisibility = element.getAttribute('material').transparent;
                         console.log("batatinha visivel: ", currentVisibility);
                         element.setAttribute('transparent', !currentVisibility);
-                        // element.setAttribute('visible', !currentVisibility);
+                        element.setAttribute('visible', !currentVisibility);
                     });
                 });
 
