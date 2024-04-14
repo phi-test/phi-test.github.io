@@ -16,16 +16,11 @@
                 // element.addEventListener('click', function () {
                 //     element.setAttribute('transparent', !currentVisibility);
                 // });
-                element.addEventListener('click', function () {
-                    var currentVisibility = element.getAttribute('material').transparent;
+                document.querySelector("#box").addEventListener('click', function () {
+                    var currentVisibility = element.getAttribute('material').visible;
                     console.log("batatinha visivel: ", currentVisibility);
-                    element.setAttribute('transparent', !currentVisibility);
+                    // element.setAttribute('transparent', !currentVisibility);
                     element.setAttribute('visible', !currentVisibility);
-                    if (currentVisibility) {
-                        element.setAttribute('opacity', 1);
-                    } else {
-                        element.setAttribute('opacity', 0);
-                    }
                 });
 
                 // element.addEventListener('mouseleave', function () {
@@ -40,10 +35,11 @@
 
 
     <a-scene>
-        <a-camera><a-cursor></a-cursor></a-camera>
-        <a-sky src="puydesancy.jpg" rotation="0 -130 0" display-image-on-click></a-sky>
-        <!-- <a-box color="#EF2D5E" position="0 1 -4" change-color-on-hover="color: blue"></a-box> -->
 
+        <a-camera><a-cursor>
+                <a-sky src="puydesancy.jpg" rotation="0 -130 0" display-image-on-click></a-sky>
+                <a-box id="box" color="#EF2D5E" position="0 1 -4"></a-box>
+            </a-cursor></a-camera>
     </a-scene>
 
 </body>
