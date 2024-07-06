@@ -30,13 +30,13 @@
 <a-scene mindar-image="imageTargetSrc: https://phi-test.github.io/targets.mind; maxTrack: 1" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights"
          vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
     <a-assets>
-    	<video id="vidtargettwo" src="https://phi-test.github.io/video.mp4" type="video/mp4" loop="true" playsinline autoplay></video>
+    	<video id="vidtargettwo" src="https://phi-test.github.io/video.mp4" type="video/mp4" loop="true" playsinline autoplay crossorigin="anonymous"></video>
     </a-assets>
 
     <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
     
         <a-entity mindar-image-target="targetIndex: 1"  id="entitytarget">
-            <a-video id="vidtarget" webkit-playsinline playsinline autoplay height="0.55" width="1" rotation="0 0 0" src="#vidtargettwo" loop="true" src="#vid" crossorigin="anonymous"></a-video>
+            <a-video id="vidtarget" webkit-playsinline playsinline autoplay height="0.55" width="1" rotation="0 0 0" src="#vidtargettwo" loop="true" src="#vid"></a-video>
         </a-entity>
     
 </a-scene>
