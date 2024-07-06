@@ -24,16 +24,9 @@
 
     });
 
-    </script>
-       <style>
-      body {
-        margin: 0;
-           background: white;
-      }
-    </style>
 </head>
 <body>
-<a-scene mindar-image="imageTargetSrc: targets.mind; maxTrack: 1" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights"
+<a-scene loading-screen="enabled: false" mindar-image="imageTargetSrc: targets.mind; maxTrack: 1" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights"
          vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
     <a-assets timeout="10000">
     	<video id="vidtargettwo" src="video.mp4" type="video/mp4" loop="true" playsinline autoplay crossorigin="anonymous"></video>
