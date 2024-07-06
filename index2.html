@@ -29,7 +29,7 @@
 <body>
 <a-scene mindar-image="imageTargetSrc: https://phi-test.github.io/targets.mind; maxTrack: 1" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights"
          vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
-    <a-assets>
+    <a-assets timeout="30000">
     	<video id="vidtargettwo" src="https://phi-test.github.io/video.mp4" type="video/mp4" loop="true" playsinline autoplay crossorigin="anonymous"></video>
     </a-assets>
 
