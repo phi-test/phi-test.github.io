@@ -11,16 +11,24 @@
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image-aframe.prod.js"></script>
     <script>
     document.addEventListener("DOMContentLoaded", function() {
-        window.addEventListener('click', function () {
-            console.log("Click on window detected");
-            var video2 = document.querySelector('#vidtargettwo');
+        const imgTarget = document.querySelector('#entitytarget');
+        // detect target found
+	imgTarget.addEventListener("targetFound", event => {
+	  console.log("target found");
+         var video2 = document.querySelector('#vidtargettwo');
             if (video2.paused == true) {
               video2.play();
-              } else {
-              video2.pause();
-            }
-        }
-                               );
+              }
+	});
+        // window.addEventListener('click', function () {
+        //     console.log("Click on window detected");
+        //     var video2 = document.querySelector('#vidtargettwo');
+        //     if (video2.paused == true) {
+        //       video2.play();
+        //       } else {
+        //       video2.pause();
+        //     }
+        // });
 
 
     });
