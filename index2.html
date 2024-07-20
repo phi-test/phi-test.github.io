@@ -20,6 +20,10 @@
               video2.play();
               }
 	});
+	    // detect target lost
+	imgTarget.addEventListener("targetLost", event => {
+	   video2.pause();
+	});
         // window.addEventListener('click', function () {
         //     console.log("Click on window detected");
         //     var video2 = document.querySelector('#vidtargettwo');
@@ -39,14 +43,14 @@
          vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
     <a-assets >
     	<video id="vidtargettwo" src="video.mp4" type="video/mp4" loop="true" playsinline autoplay crossorigin="anonymous"></video>
-<!--          <img id="icon-play" src="play.png" /> -->
+         <img id="asset-learnMore" src="learnMore.png" />
     </a-assets>
 
     <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
     
         <a-entity mindar-image-target="targetIndex: 0"  id="entitytarget">
             <a-video id="vidtarget" webkit-playsinline playsinline autoplay height="1.5" width="1" rotation="0 0 0" src="#vidtargettwo" loop="true" src="#vid"></a-video>
-<!--              <a-image id="preview-button" class="clickable" src="#icon-play" alpha-test="0.5" position="0 0 0" height="1.5" width="1"> -->
+             <a-image id="button-learnMore" class="clickable" src="#asset-learnMore" alpha-test="0.5" position="1 1 0" height="0.5" width="0.5">
         </a-entity>
     
 </a-scene>
