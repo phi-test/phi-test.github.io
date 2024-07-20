@@ -14,7 +14,7 @@
         const imgTarget = document.querySelector('#entitytarget');
         var video2 = document.querySelector('#vidtargettwo');
 	video2.pause();
-	var buttonTarget = document.querySelector('#asset-learnMore');
+	const buttonTarget = document.querySelector('#button-learnMore');
         // detect target found
 	imgTarget.addEventListener("targetFound", event => {
 	  console.log("target found");
@@ -28,7 +28,7 @@
 	   video2.pause();
 	});
 
-	buttonTarget.addEventListener('click', function () {
+	buttonTarget.addEventListener('click', () => {
 		console.log("learn more button clicked");
 		window.open("http://google.com");
 
