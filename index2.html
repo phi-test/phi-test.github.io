@@ -36,7 +36,7 @@
 		// window.open("http://google.com");
 
 	});
-	    video2.addEventListener('click', () => {
+	video2.addEventListener('click', () => {
 		console.log("video clicked");
 		// window.open("http://google.com");
 
@@ -58,16 +58,15 @@
 <body>
 <a-scene loading-screen="enabled: true; dotsColor: white; backgroundColor: black" mindar-image="imageTargetSrc: targets.mind; maxTrack: 1" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights"
          vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
-    <a-assets >
-    	<video id="vidtargettwo" src="video.mp4" type="video/mp4" loop="true" playsinline autoplay crossorigin="anonymous"></video>
-         <img id="assetLearnMore" src="learnMore.png" />
-    </a-assets>
+    	<a-assets >
+    		<video id="vidtargettwo" src="video.mp4" type="video/mp4" loop="true" playsinline autoplay crossorigin="anonymous"></video>
+         	<img id="assetLearnMore" src="learnMore.png" />
+    	</a-assets>
 
-    <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
-    
-        <a-entity mindar-image-target="targetIndex: 0"  id="entitytarget">
-            <a-video id="vidtarget" webkit-playsinline playsinline autoplay height="1.5" width="1" rotation="0 0 0" src="#vidtargettwo" loop="true"></a-video>
-            		 <a-image id="buttonLearnMore" class="clickable" src="#assetLearnMore" alpha-test="0.5" position="0 -1 0" height="0.5" width="0.5">
+	<a-camera position="0 0 0" look-controls="enabled: false"></a-camera>    
+	<a-entity mindar-image-target="targetIndex: 0"  id="entitytarget">
+            <a-video id="vidtarget" webkit-playsinline playsinline autoplay height="1.5" width="1" rotation="0 0 0" src="#vidtargettwo" loop="true" src="#vid"></a-video>
+            <a-image id="buttonLearnMore" class="clickable" src="#assetLearnMore" alpha-test="0.5" position="0 -1 0" height="0.5" width="0.5">
         </a-entity>
     
 </a-scene>
