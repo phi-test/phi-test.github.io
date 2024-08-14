@@ -17,19 +17,19 @@
 
 	    video2.pause();
 	    
-        // detect target found
-	imgTarget.addEventListener("targetFound", event => {
-	  console.log("target found");
-            if (video2.paused == true) {
-              video2.play();
-              }
-	});
-	    // detect target lost
+ //        // detect target found
+	// imgTarget.addEventListener("targetFound", event => {
+	//   console.log("target found");
+ //            if (video2.paused == true) {
+ //              video2.play();
+ //              }
+	// });
+	//     // detect target lost
 	    
-	imgTarget.addEventListener("targetLost", event => {
-		console.log("target lost");
-	   video2.pause();
-	});
+	// imgTarget.addEventListener("targetLost", event => {
+	// 	console.log("target lost");
+	//    video2.pause();
+	// });
 
 	buttonTarget.addEventListener('click', () => {
 		console.log("learn more button clicked");
@@ -37,7 +37,7 @@
 
 	});
 	video2.addEventListener('click', () => {
-		video2.muted = false;
+		video2.play();
 		console.log("video clicked");
 		// window.open("http://google.com");
 
@@ -61,7 +61,7 @@
          vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
     	<a-assets >
 		<div style="position: fixed">
-    		<video id="vidtargettwo" src="video.mp4" type="video/mp4" loop="true" playsinline autoplay muted crossorigin="anonymous"></video>
+    		<video id="vidtargettwo" src="video.mp4" type="video/mp4" loop="true" playsinline autoplay crossorigin="anonymous"></video>
 </div>
 			<img id="assetLearnMore" src="learnMore.png" />
     	</a-assets>
