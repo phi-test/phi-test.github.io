@@ -15,7 +15,7 @@
         const video2 = document.querySelector('#vidtargettwo');
 	const buttonTarget = document.querySelector("#buttonLearnMore");
 
-	    video2.pause();
+	    // video2.pause();
 	    
  //        // detect target found
 	// imgTarget.addEventListener("targetFound", event => {
@@ -42,15 +42,15 @@
 		// window.open("http://google.com");
 
 	});
-        // window.addEventListener('click', function () {
-        //     console.log("Click on window detected");
-        //     // var video2 = document.querySelector('#vidtargettwo');
-        //     // if (video2.paused == true) {
-        //     //   video2.play();
-        //     //   } else {
-        //     //   video2.pause();
-        //     // }
-        // });
+        window.addEventListener('click', function () {
+            console.log("Click on window detected");
+            // var video2 = document.querySelector('#vidtargettwo');
+            if (video2.paused == true) {
+              video2.play();
+              } else {
+              video2.pause();
+            }
+        });
 
 
     });
@@ -61,7 +61,7 @@
          vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
     	<a-assets >
 		<div style="position: fixed">
-    		<video id="vidtargettwo" src="video.mp4" type="video/mp4" loop="true"  crossorigin="anonymous"></video>
+    		<video id="vidtargettwo" src="video.mp4" type="video/mp4" loop="true" webkit-playsinline playsinline crossorigin="anonymous"></video>
 </div>
 			<img id="assetLearnMore" src="learnMore.png" />
     	</a-assets>
