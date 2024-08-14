@@ -20,7 +20,6 @@
         // detect target found
 	imgTarget.addEventListener("targetFound", event => {
 	  console.log("target found");
-		video2.muted = false;
             if (video2.paused == true) {
               video2.play();
               }
@@ -38,6 +37,8 @@
 
 	});
 	video2.addEventListener('click', () => {
+		
+		video2.muted = false;
 		console.log("video clicked");
 		// window.open("http://google.com");
 
