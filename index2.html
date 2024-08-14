@@ -20,6 +20,7 @@
         // detect target found
 	imgTarget.addEventListener("targetFound", event => {
 	  console.log("target found");
+		videoEl.muted = false;
             if (video2.paused == true) {
               video2.play();
               }
@@ -60,7 +61,7 @@
          vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
     	<a-assets >
 		<div style="position: fixed">
-    		<video id="vidtargettwo" src="video.mp4" type="video/mp4" loop="true" playsinline autoplay crossorigin="anonymous"></video>
+    		<video id="vidtargettwo" src="video.mp4" type="video/mp4" loop="true" playsinline autoplay muted crossorigin="anonymous"></video>
 </div>
 			<img id="assetLearnMore" src="learnMore.png" />
     	</a-assets>
