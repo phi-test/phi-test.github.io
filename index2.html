@@ -18,18 +18,18 @@
 	    // video2.pause();
 	    
  //        // detect target found
-	// imgTarget.addEventListener("targetFound", event => {
-	//   console.log("target found");
- //            if (video2.paused == true) {
- //              video2.play();
- //              }
-	// });
-	//     // detect target lost
+	imgTarget.addEventListener("targetFound", event => {
+	  console.log("target found");
+            if (video2.paused == true) {
+              video2.play();
+              }
+	});
+	    // detect target lost
 	    
-	// imgTarget.addEventListener("targetLost", event => {
-	// 	console.log("target lost");
-	//    video2.pause();
-	// });
+	imgTarget.addEventListener("targetLost", event => {
+		console.log("target lost");
+	   video2.pause();
+	});
 
 	buttonTarget.addEventListener('click', () => {
 		console.log("learn more button clicked");
@@ -37,18 +37,22 @@
 
 	});
 	video2.addEventListener('click', () => {
-		video2.play();
+		 if (video2.paused == true) {
+              video2.play();
+              } else {
+			 video2.pause();
+	      }
 		console.log("video clicked");
 		// window.open("http://google.com");
 
 	});
-        window.addEventListener('click', function () {
-            console.log("Click on window detected");
-            // var video2 = document.querySelector('#vidtargettwo');
-            if (video2.paused == true) {
-              video2.play();
-              } 
-        });
+        // window.addEventListener('click', function () {
+        //     console.log("Click on window detected");
+        //     // var video2 = document.querySelector('#vidtargettwo');
+        //     if (video2.paused == true) {
+        //       video2.play();
+        //       } 
+        // });
 
 
     });
