@@ -44,12 +44,12 @@
 		playButton.addEventListener('click', () => {
 		console.log("play button clicked");
 	     		if (video2.paused == true) {
-                		video2.play();
 				playButton.setAttribute('visible', false);
-				buttonTarget.visible = true;
+				buttonTarget.setAttribute('visible', true);
+                		video2.play();
              		 } else {
 				playButton.setAttribute('visible', true);
-				buttonTarget.visible = false;
+				buttonTarget.setAttribute('visible', false);
 				video2.pause();
 	     		 }
 
@@ -88,7 +88,7 @@
 </head>
 <body>
 <a-scene loading-screen="enabled: true; dotsColor: white; backgroundColor: black" mindar-image="imageTargetSrc: targets.mind; maxTrack: 1" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights"
-         vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+         vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false" >
     	<a-assets >
     		<video id="vidtargettwo" src="video.mp4" type="video/mp4" loop="true" webkit-playsinline playsinline crossorigin="anonymous"></video>
 		<img id="assetLearnMore" src="learnMore.png" />
@@ -99,8 +99,8 @@
 	<a-entity mindar-image-target="targetIndex: 0"  id="entitytarget">
 		<a-video id="vidtarget" height="1.5" width="1" src="#vidtargettwo" loop="true""></a-video>
 		<a-image id="playButton" class="clickable" visible="true" src="#assetPlayButton" alpha-test="0.5" height="0.5" width="0.5">
-              	<a-image id="buttonLearnMore" class="clickable" visible="false" src="#assetLearnMore" alpha-test="0.5" position="0 -1 0" height="0.5" width="0.5">
 	</a-entity>
+        <a-image id="buttonLearnMore" class="clickable" visible="false" src="#assetLearnMore" alpha-test="0.5" position="0 -1 0" height="0.5" width="0.5">
 
 </a-scene>
 </body>
