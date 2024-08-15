@@ -46,15 +46,21 @@
 	// 	// window.open("http://google.com");
 
 	// });
-        window.addEventListener('click', function () {
-            console.log("Click on window detected");
-            // var video2 = document.querySelector('#vidtargettwo');
-            if (video2.paused == true) {
-              video2.play();
-              }  else {
-			 video2.pause();
-	      }
-        });
+    //     window.addEventListener('click', function () {
+    //         console.log("Click on window detected");
+    //         // var video2 = document.querySelector('#vidtargettwo');
+    //         if (video2.paused == true) {
+    //           video2.play();
+    //           }  else {
+			 // video2.pause();
+	   //    }
+    //     });
+
+	    function playVideo() {
+  var vid = document.querySelector('#vidtargettwo');
+  vid.muted = false;
+  vid.play();
+}
 
 
     });
@@ -75,7 +81,8 @@
             <a-video id="vidtarget" play-on-click height="1.5" width="1" rotation="0 0 0" src="#vidtargettwo" loop="true" src="#vid"></a-video>
             <a-image id="buttonLearnMore" class="clickable" src="#assetLearnMore" alpha-test="0.5" position="0 -1 0" height="0.5" width="0.5">
         </a-entity>
-    
+    <button onclick="playVideo();">Play Video</button>
+
 </a-scene>
 </body>
 </html>
