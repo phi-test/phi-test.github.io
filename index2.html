@@ -57,6 +57,7 @@
     //     });
 
 	    function playVideo() {
+		    console.log("Click on button");
   var vid = document.querySelector('#vidtargettwo');
   vid.muted = false;
   vid.play();
@@ -70,9 +71,8 @@
 <a-scene loading-screen="enabled: true; dotsColor: white; backgroundColor: black" mindar-image="imageTargetSrc: targets.mind; maxTrack: 1" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights"
          vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
     	<a-assets >
-		<div style="position: fixed">
     		<video id="vidtargettwo" src="video.mp4" type="video/mp4" loop="true" webkit-playsinline playsinline muted crossorigin="anonymous"></video>
-</div>
+
 			<img id="assetLearnMore" src="learnMore.png" />
     	</a-assets>
 
