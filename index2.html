@@ -46,8 +46,10 @@
 	     		if (video2.paused == true) {
                 		video2.play();
 				playButton.setAttribute('visible', false);
-				buttonTarget.setAttribute('visible', true);
+				buttonTarget.visible = true;
              		 } else {
+				playButton.setAttribute('visible', true);
+				buttonTarget.visible = false;
 				video2.pause();
 	     		 }
 
