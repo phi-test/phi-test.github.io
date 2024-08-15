@@ -27,10 +27,12 @@
 	// });
 	// //     // detect target lost
 	    
-	// imgTarget.addEventListener("targetLost", event => {
-	// 	console.log("target lost");
-	//    video2.pause();
-	// });
+	imgTarget.addEventListener("targetLost", event => {
+		console.log("target lost");
+		playButton.setAttribute('src', '#assetPlayButton');
+		playButton.setAttribute('position', '0 0 0');
+		video2.pause();
+	});
 	// if(video2 != null){
 	// 	if(video2.paused == true){
 			
