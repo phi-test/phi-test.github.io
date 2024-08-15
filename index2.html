@@ -19,20 +19,20 @@
 	    // video2.pause();
 	    
  //        // detect target found
-	imgTarget.addEventListener("targetFound", event => {
-		console.log("target found");
-            	if (video2.paused == true) {
-              		video2.play();
-	      		playButton.setAttribute('visible', false);
-			buttonTarget.setAttribute('visible', true);
-             	}
-	});
-	//     // detect target lost
+	// imgTarget.addEventListener("targetFound", event => {
+	// 	console.log("target found");
+ //            	if (video2.paused == true) {
+ //              		video2.play();
+	//       		playButton.setAttribute('visible', false);
+	// 		buttonTarget.setAttribute('visible', true);
+ //             	}
+	// });
+	// //     // detect target lost
 	    
-	imgTarget.addEventListener("targetLost", event => {
-		console.log("target lost");
-	   video2.pause();
-	});
+	// imgTarget.addEventListener("targetLost", event => {
+	// 	console.log("target lost");
+	//    video2.pause();
+	// });
 
 	if(buttonTarget != null){
 		buttonTarget.addEventListener('click', () => {
