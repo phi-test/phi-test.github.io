@@ -43,9 +43,8 @@
 		console.log("play button clicked");
 	     if (video2.paused == true) {
                 video2.play();
-		platButton.opacity = 0;
+		platButton.setAttribute('visible', false);
               } else {
-		platButton.opacity = 1;
 		video2.pause();
 	      }
 		// window.open("http://google.com","_self");
