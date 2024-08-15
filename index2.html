@@ -15,7 +15,7 @@
         const video2 = document.querySelector('#vidtargettwo');
 	const buttonTarget = document.querySelector("#buttonLearnMore");
 	const playButton = document.querySelector("#playButton");
-
+	buttonTarget.setAttribute('visible', false);
 	    // video2.pause();
 	    
  //        // detect target found
@@ -100,7 +100,7 @@
 		<a-video id="vidtarget" height="1.5" width="1" src="#vidtargettwo" loop="true""></a-video>
 		<a-image id="playButton" class="clickable" visible="true" src="#assetPlayButton" alpha-test="0.5" height="0.5" width="0.5">
 	</a-entity>
-        <a-image id="buttonLearnMore" class="clickable" visible="false" src="#assetLearnMore" alpha-test="0.5" position="0 -1 0" height="0.5" width="0.5">
+        <a-image id="buttonLearnMore" class="clickable" visible="true" src="#assetLearnMore" alpha-test="0.5" position="0 -1 0" height="0.5" width="0.5">
 
 </a-scene>
 </body>
